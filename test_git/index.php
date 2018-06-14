@@ -15,6 +15,7 @@
 	je suis le header
 </head>
 
+<h1>MitMit</h1>
 
 <footer>
 	je suis le footer
