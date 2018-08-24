@@ -1,0 +1,67 @@
+doctrine_exo_home:
+    path:     /admin/home
+    defaults: { _controller: DoctrineExoBundle:Default:index }
+
+doctrine_exo_authors:
+    path:     /admin/authors
+    defaults: { _controller: DoctrineExoBundle:Default:listAllAuthors }
+
+doctrine_exo_books:
+    path:     /admin/books
+    defaults: { _controller: DoctrineExoBundle:Default:listAllBooks }
+
+doctrine_exo_bookpage:
+    path:     /admin/bookpage/{id}
+    defaults: { _controller: DoctrineExoBundle:Default:findBookById }
+
+doctrine_exo_bookkind:
+    path:     /admin/bookkind
+    defaults: { _controller: DoctrineExoBundle:Default:findBookByKind }
+
+doctrine_exo_books2:
+    path:     /admin/books2
+    defaults: { _controller: DoctrineExoBundle:Default:listAllBooks2 }
+
+doctrine_exo_bookkind2:
+    path:     /admin/bookkind2
+    defaults: { _controller: DoctrineExoBundle:Default:getBookByKind }
+
+doctrine_exo_createBook:
+    path:     /admin/createbook
+    defaults: { _controller: DoctrineExoBundle:Default:createBook }
+
+doctrine_exo_createAuthor:
+    path:     /admin/createauthor
+    defaults: { _controller: DoctrineExoBundle:Default:createAuthor }
+
+doctrine_exo_deleteBook:
+    path:     /admin/deletebook/{id}
+    defaults: { _controller: DoctrineExoBundle:Default:deleteBook }
+
+doctrine_exo_deleteAuthor:
+    path:     /admin/deleteauthor
+    defaults: { _controller: DoctrineExoBundle:Default:deleteAuthor }
+
+doctrine_exo_updateBook:
+    path:     /admin/updatebook
+    defaults: { _controller: DoctrineExoBundle:Default:updateBook }
+
+doctrine_exo_updateAuthor:
+    path:     /admin/updateauthor/{id}
+    defaults: { _controller: DoctrineExoBundle:Default:updateAuthor }
+
+doctrine_exo_formBook:
+    path:     /admin/formbook
+    defaults: { _controller: DoctrineExoBundle:Default:formBook }
+
+doctrine_exo_formAuthor:
+    path:     /admin/formauthor
+    defaults: { _controller: DoctrineExoBundle:Default:formAuthor }
+
+doctrine_exo_updateFormBook:
+    path:     /admin/formbookupdate/{id}
+    defaults: { _controller: DoctrineExoBundle:Default:formBookUpdate }
+
+doctrine_exo_contact:
+    path:     /admin/contact
+    defaults: { _controller: DoctrineExoBundle:Default:contactUs }

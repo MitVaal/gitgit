@@ -1,0 +1,23 @@
+{# {{ form(formView) }} => permet de créer le formulaire html en entier sans possibilité de le moduler #}
+
+
+{{ form_start(formView) }}
+
+<div>
+    {{ form_row(formView.image) }}
+</div>
+
+{{ form_row(formView.title) }}
+
+    {{ form_row(formView.kind) }}
+
+    {{ form_row(formView.pagesNumber) }}
+
+    {{ form_row(formView.format) }}
+
+    {{ form_row(formView.author) }}
+
+    {{ form_row(formView.submit, { 'label': 'Valider' }) }}
+
+
+{{ form_end(formView) }}

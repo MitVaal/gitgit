@@ -1,0 +1,33 @@
+{% extends '@DoctrineExo/Default/base.html.twig' %}
+
+    {% block title %}<title>Contact Us</title>{% endblock %}
+
+ {% block content %}
+
+     <div class="bgContact">
+
+         <p class="infoContact">N'hésitez pas à nous envoyer un message, nous nous engageons à vous répondre dans les 48h !</p>
+
+         {{ form_start(formView) }}
+
+         <p class="labelContactForm">{{ form_label(formView.nom, 'Nom*') }}</p>
+         {{ form_widget(formView.nom, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+         <p class="labelContactForm">{{ form_label(formView.prenom, 'Prénom*') }}</p>
+         {{ form_widget(formView.prenom, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+         <p class="labelContactForm">{{ form_label(formView.email, 'Email*') }}</p>
+         {{ form_widget(formView.email, { 'attr': {'class': 'widgetContactForm'} }) }}
+
+         <p class="labelContactForm">{{ form_label(formView.message, 'Votre message') }}</p>
+         {{ form_widget(formView.message, { 'attr': {'class': 'messageContactForm'} }) }}
+
+         <p class="labelContactForm">{{ form_row(formView.submit, { 'label': 'Envoyer', 'attr': {'class': 'boutonEnvoyer'} }) }}</p>
+
+         {{ form_end(formView) }}
+
+
+     </div>
+
+
+ {% endblock %}

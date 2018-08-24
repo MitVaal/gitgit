@@ -1,0 +1,16 @@
+{% extends '@DoctrineExo/Default/base.html.twig' %}
+
+    {% block title %}<title>Book</title>{% endblock %}
+
+ {% block content %}
+
+     <a class="returnPage" href="{{ path('doctrine_exo_books') }}"><p >Retour à la sélection</p></a>
+
+         <div class="bookDetail">
+             <img src="{{ book.image }}" class="imgDetailBook">
+             <h3>{{ book.title }}</h3>
+             <p>{{ book.kind }}, {{ book.pagesNumber }} pages, {{ book.format }}</p>
+         </div>
+
+
+ {% endblock %}

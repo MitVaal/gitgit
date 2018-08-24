@@ -1,0 +1,20 @@
+{% extends '@DoctrineExo/Default/base.html.twig' %}
+
+    {% block title %}<title>Our Books</title>{% endblock %}
+
+ {% block content %}
+
+     {% for book in books %}
+
+         <div class="bookDetail">
+             <img src="{{ book.image }}" class="imgDetailBook">
+             <a href="{{ path('doctrine_exo_bookpage', { 'id' : book.id }) }}"><h3>{{ book.title }}</h3></a>
+             <p>{{ book.kind }}, {{ book.pagesNumber }} pages, {{ book.format }}</p>
+             <a href="{{ path('doctrine_exo_deleteBook', { 'id' : book.id }) }}"><p>Supprimer</p></a>
+             <a href="{{ path('doctrine_exo_updateFormBook', { 'id' : book.id }) }}"><p>Modifier</p></a>
+
+         </div>
+
+     {% endfor %}
+
+ {% endblock %}

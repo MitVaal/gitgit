@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="DoctrineExoBundle\Repository\BookRepository" name="DoctrineExoBundle\Entity\Book">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="image" type="string" column="image"/>
+        <field name="kind" type="string" column="kind" length="255"/>
+        <field name="title" type="string" column="title" length="255"/>
+        <field name="pagesNumber" type="integer" column="pagesNumber" nullable="true"/>
+        <field name="format" type="string" column="format" length="255"/>
+        <many-to-one
+                     field="author"
+                     target-entity="DoctrineExoBundle\Entity\Author"
+                     inversed-by="book">
+        </many-to-one>
+
+    </entity>
+</doctrine-mapping>

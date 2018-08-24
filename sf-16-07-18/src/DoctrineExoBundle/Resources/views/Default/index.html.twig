@@ -1,0 +1,18 @@
+{% extends '@DoctrineExo/Default/base.html.twig' %}
+
+    {% block title %}<title>Bienvenue !</title>{% endblock %}
+
+ {% block content %}
+
+     <div>
+         <a class="selectionHome" href="{{ path('doctrine_exo_books') }}"><img src="https://media.cultura.com/media/wysiwyg/VITRINES/2018/03_BOUTIQUES/06_Livre_ete/W8_livre_ete_v2_CTA.jpg" alt=""></a>
+     </div>
+
+     <div class="blocksHome">
+         <a href="{{ path('doctrine_exo_bookkind2') }}"><img class="imgHome" src="https://media.cultura.com/media/wysiwyg/VITRINES/2018/Livre/W18/W18_romans1.jpg"></a>
+         <a href="{{ path('doctrine_exo_bookkind') }}"><img class="imgHome" src="https://media.cultura.com/media/wysiwyg/VITRINES/2018/Livre/W18/W18_jeunesse1.jpg"></a>
+     </div>
+
+
+ {% endblock %}
+

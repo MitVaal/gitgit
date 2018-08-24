@@ -1,0 +1,20 @@
+{% extends '@DoctrineExo/Default/base.html.twig' %}
+
+    {% block title %}<title>Our Authors</title>{% endblock %}
+
+
+ {% block content %}
+
+     {% for author in authors %}
+
+         <div class="authorDetail">
+             <img src="{{ author.image }}" class="imgDetailAuthor">
+             <p class="titreAuthor">{{ author.prenom }} {{ author.nom }} ({{ author.dateNaissance }})</p>
+             <p class="bioDetailAuthor">{{ author.biographie }}</p>
+             <a href="{{ path('doctrine_exo_updateAuthor', { 'id' : author.id }) }}"><p>Modifier</p></a>
+         </div>
+
+
+     {% endfor %}
+
+ {% endblock %}

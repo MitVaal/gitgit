@@ -1,0 +1,11 @@
+blog_doctrine:
+    resource: "@BlogDoctrineBundle/Resources/config/routing.yml"
+    prefix:   /
+
+doctrine_exo:
+    resource: "@DoctrineExoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

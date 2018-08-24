@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="DoctrineExoBundle\Entity\Author" repository-class="DoctrineExoBundle\Repository\Author">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="image" type="string" column="image"/>
+        <field name="nom" type="string" column="nom"/>
+        <field name="prenom" type="string" column="prenom"/>
+        <field name="dateNaissance" type="string" column="date_naissance"/>
+        <field name="dateMort" type="string" column="date_mort"/>
+        <field name="biographie" type="text" column="biographie"/>
+        <one-to-many
+                     field="book"
+                     target-entity="DoctrineExoBundle\Entity\Book"
+                     mapped-by="author">
+        </one-to-many>
+    </entity>
+</doctrine-mapping>

@@ -1,0 +1,4 @@
+services:
+#    blog_doctrine.example:
+#        class: BlogDoctrineBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
